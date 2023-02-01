@@ -1,0 +1,134 @@
+:root {
+	--my-transition-delay: 0.15s;
+	--my-br: 0.5rem;
+	--my-offset: 0.5rem;
+	--tab-border-radius: 0.5rem !important;
+	--toolbarbutton-border-radius: 0.5rem !important;
+	--urlbarView-item-inline-padding: 0.5rem !important;
+
+	/* from firefox color extension - TokyoFox */
+	--lwt-accent-color: rgb(15, 15, 20) !important;
+	--toolbar-field-border-color: rgb(15, 15, 20) !important;
+	--lwt-background-tab-separator-color: rgb(15, 15, 20) !important;
+	--toolbar-bgcolor: rgb(15, 15, 20) !important;
+	--chrome-content-separator-color: rgb(15, 15, 20) !important;
+	--tabpanel-background-color: rgb(15, 15, 20) !important;
+
+	--toolbar-field-color: rgb(192, 202, 245) !important;
+	--toolbar-field-focus-color: rgb(192, 202, 245) !important;
+	--toolbar-field-focus-border-color: rgb(192, 202, 245) !important;
+	--toolbar-color: rgb(192, 202, 245) !important;
+	--lwt-text-color: rgb(192, 202, 245) !important;
+	--panel-disabled-color: rgba(192, 202, 245, 0.5) !important;
+	--panel-description-color: rgba(192, 202, 245, 0.7) !important;
+	--arrowpanel-color: rgb(192, 202, 245) !important;
+	
+	--arrowpanel-border-color: rgba(0, 0, 0, 0) !important;
+	
+	--arrowpanel-background: rgb(26, 27, 38) !important;
+	--toolbar-field-background-color: rgb(26, 27, 38) !important;
+	--toolbarbutton-hover-background: rgb(26, 27, 38) !important;
+	--lwt-selected-tab-background-color: rgb(26, 27, 38) !important;
+	--toolbar-field-focus-background-color: rgb(26, 27, 38) !important;
+	
+	--autocomplete-popup-highlight-background: rgb(86, 95, 137) !important;
+	--lwt-toolbar-field-highlight: rgb(86, 95, 137) !important;
+}
+
+menu, menuitem {
+	margin: 0 var(--my-offset) 0 var(--my-offset) !important;
+	border-radius: var(--my-br) !important;
+	padding-inline-start: var(--my-offset) !important;
+}
+
+menu:hover,
+menuitem:hover,
+.toolbarbutton-1,
+.toolbarbutton-badge-stack,
+.toolbarbutton-icon,
+.bookmark-item,
+.tab-close-button,
+.tab-background,
+#urlbar-input-container * {
+	transition: background-color var(--my-transition-delay) ease-in-out !important;
+}
+
+#context-navigation:not([hidden]) {
+	min-width: initial !important;
+	justify-content: space-between;
+	padding: 0 !important;
+}
+
+#context-navigation > .menuitem-iconic {
+	width: initial !important;
+	flex: initial !important;
+	padding: 0 !important;
+}
+
+#context-navigation > .menuitem-iconic[_moz-menuactive="true"] > .menu-iconic-left > .menu-iconic-icon {
+	border-radius: var(--my-br) !important;
+	transition: background-color var(--my-transition-delay) ease-in-out !important;
+}
+
+menuseparator, toolbarseparator {
+	padding: 0 !important;
+	margin: var(--my-offset) !important;
+}
+
+.menupopup-arrowscrollbox {
+	padding: var(--my-offset) 0 var(--my-offset) 0 !important;
+	border: none !important;
+	border-radius: var(--my-br) !important;
+}
+
+slot:nth-child(1) {
+	border: none !important;
+}
+
+.subviewbutton:not(.toolbarbutton-1) {
+	border-radius: var(--my-br) !important;
+	padding: var(--my-offset) !important;
+	margin: 0 var(--my-offset) 0 var(--my-offset) !important;
+	transition: background-color var(--my-transition-delay) ease-in-out !important;
+}
+
+#appMenu-fxa-label2 {
+	width: 100% !important;
+	align-self: end !important;
+}
+
+#appMenu-fxa-status2 {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#appMenu-zoomReduce-button2 > image:nth-child(1),
+#appMenu-zoomEnlarge-button2 > image:nth-child(1),
+#appMenu-fullscreen-button2 > image:nth-child(2) {
+	background-color: initial !important;
+}
+
+#PanelUI-fxa > box:nth-child(1) {
+	padding: 0 !important;
+}
+
+vbox.panel-header {
+	padding: 0 !important;
+}
+
+panelview {
+	padding: var(--my-br) 0 var(--my-br) 0 !important;
+}
+
+.tabbrowser-tab[usercontextid] > .tab-stack > .tab-background > .tab-context-line {
+	height: 1px !important;
+	width: 95% !important;
+	margin: 0px auto !important;
+}
+
+tab[class*='identity-color-'] > .tab-stack > .tab-background {
+	background-image: linear-gradient(180deg, var(--identity-icon-color) -500%, transparent 100%) !important;
+}
+tab[class*='identity-color-'] > .tab-stack > .tab-background[selected] {
+	background-image: linear-gradient(180deg, var(--identity-icon-color) -500%, var(--lwt-selected-tab-background-color) 100%) !important;
+}

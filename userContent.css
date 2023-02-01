@@ -1,0 +1,5 @@
+body {
+	--newtab-background-color: rgb(15, 15, 20) !important;
+	--newtab-background-color-secondary: rgb(26, 27, 38) !important;
+	--newtab-primary-action-background: rgb(192, 202, 245) !important;
+}
